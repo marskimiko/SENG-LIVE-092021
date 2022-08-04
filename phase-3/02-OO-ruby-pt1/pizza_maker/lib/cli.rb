@@ -22,7 +22,8 @@ def menu_selection
 
   until input == 'exit'
     if input == '1'
-      create_pizza
+      pizza = create_pizza
+      pizza.details
     elsif input == '2'
       pizzas
     else 
@@ -40,14 +41,10 @@ def create_pizza
   puts "Describe this pizza: "
   desc = gets.strip 
 
-  pizza = {
-    name: name,
-    toppings: toppings,
-    desc: desc
-  }
+  pizza = Pizza.new(name, toppings, desc) # pizza instance
 
   PIZZAS << pizza 
-
+  
   pizza
 end 
 
