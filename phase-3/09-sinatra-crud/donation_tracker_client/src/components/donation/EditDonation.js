@@ -4,7 +4,7 @@ function EditDonation({ donation, onUpdateDonation }) {
   const { id, amount, date } = donation;
 
   const [updatedAmount, setUpdatedAmount] = useState(amount);
-  const [updatedDate, setUpdatedDate] = useState(date);
+  const [updatedDate, setUpdatedDate] = useState(date.split("T")[0]);
   function handleEditForm(e) {
     e.preventDefault();
 
