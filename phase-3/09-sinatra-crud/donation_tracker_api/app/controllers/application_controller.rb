@@ -5,4 +5,10 @@ class ApplicationController < Sinatra::Base
         "Hello World"
     end
 
+    private
+
+    def current_user
+        Donor.first
+    end
+
 end

@@ -17,3 +17,4 @@ group :development do
   gem "rerun"
   gem "pry"
 end
+gem "rack-contrib", "~> 2.3"
